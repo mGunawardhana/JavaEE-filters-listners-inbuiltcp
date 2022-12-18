@@ -12,7 +12,7 @@ import java.util.Objects;
  * © 2022 mGunawardhana,INC. ALL RIGHTS RESERVED.
  */
 
-@WebFilter(urlPatterns = "/a")
+//@WebFilter(urlPatterns = "/a")
 public class FilterOne implements Filter {
 
     @Override

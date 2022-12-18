@@ -10,21 +10,31 @@ import java.io.IOException;
  * <p>
  * © 2022 mGunawardhana,INC. ALL RIGHTS RESERVED.
  */
-
-//@WebFilter(urlPatterns = "/b")
-public class FilterTwo implements Filter {
+@WebFilter(urlPatterns = "/b")
+public class FilterThree implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        System.out.println("Filter Two Initialize");
+        System.out.println("Filter Three Invoked");
     }
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("Filter Two doFilter Method Invoked");
+        System.out.println("Filter Three doFilter Method Invoked");
+        String name = servletRequest.getParameter("name");
+
+        if (name.equals("ijse")){
+
+            filterChain.doFilter(servletRequest,servletResponse);
+
+        }else{
+
+            servletResponse.getWriter().write("<h1>Un Authorized User </h1>");
+        }
     }
 
     @Override
     public void destroy() {
-        System.out.println("Filter Two Destroyed");
+        System.out.println("Filter Three Destroyed");
+
     }
 }
