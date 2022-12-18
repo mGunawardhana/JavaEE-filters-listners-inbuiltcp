@@ -10,7 +10,7 @@ import java.io.IOException;
  * <p>
  * © 2022 mGunawardhana,INC. ALL RIGHTS RESERVED.
  */
-@WebFilter(urlPatterns = "/b")
+//@WebFilter(urlPatterns = "/b")
 public class FilterThree implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -25,6 +25,7 @@ public class FilterThree implements Filter {
         if (name.equals("ijse")){
 
             filterChain.doFilter(servletRequest,servletResponse);
+            servletResponse.getWriter().write("<h1>Authorized User </h1>");
 
         }else{
 

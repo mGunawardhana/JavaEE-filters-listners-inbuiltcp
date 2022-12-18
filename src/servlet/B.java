@@ -22,6 +22,5 @@ public class B extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Servlet B Get Method Invoked");
         resp.getWriter().write("<h1>B : DO GET CALLED </h1>");
-
     }
 }
