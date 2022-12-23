@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * CopyWriteOwner - mr.Gunawardhana
  * Contact - 071 - 733 1792
- *
+ * <p>
  * © 2022 mGunawardhana,INC. ALL RIGHTS RESERVED.
  */
 
@@ -19,7 +19,6 @@ public class A extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Servlet A doGet Method Invoked");
-    resp.getWriter().write("<h1>A : DO GET CALLED </h1>");
-
+        resp.getWriter().write("<h1>A : DO GET CALLED </h1>");
     }
 }
