@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="In_built_CP">
+    <output-path>$PROJECT_DIR$/out/artifacts/In_built_CP</output-path>
+    <root id="archive" name="In_built_CP.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="inBuiltCP" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="inBuiltCP/web/Web" />
+    </root>
+  </artifact>
+</component>
