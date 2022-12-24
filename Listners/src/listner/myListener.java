@@ -1,5 +1,6 @@
 package listner;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -17,10 +18,13 @@ public class myListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         System.out.println("Servlet Context Created !");
+        ServletContext servletContext = servletContextEvent.getServletContext();
+        servletContext.setAttribute("mKey","mGunawardhana");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         System.out.println("Servlet Context Destroyed !");
+
     }
 }
